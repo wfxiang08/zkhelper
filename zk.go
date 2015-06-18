@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ngaut/go-zookeeper/zk"
+	"github.com/wandoulabs/go-zookeeper/zk"
 	"github.com/ngaut/log"
 )
 
