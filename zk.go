@@ -15,8 +15,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wandoulabs/go-zookeeper/zk"
 	"github.com/ngaut/log"
+	"github.com/wandoulabs/go-zookeeper/zk"
 )
 
 var (
@@ -49,12 +49,11 @@ func (conn *MyZkConn) Seq2Str(seq int64) string {
 	return fmt.Sprintf("%0.10d", seq)
 }
 
-func ConnectToZk(zkAddr string) (Conn, error) {
-	zkConn, _, err := zk.Connect(strings.Split(zkAddr, ","), 3*time.Second)
+func ConnectToZk(zkAddr string, zkSessionTimeout int) (Conn, error) {
+	zkConn, _, err := zk.Connect(strings.Split(zkAddr, ","), 3*time.Second, zkSessionTimeout)
 	if err != nil {
 		return nil, err
 	}
-
 	return &MyZkConn{Conn: zkConn}, nil
 }
 

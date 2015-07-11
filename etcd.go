@@ -10,9 +10,9 @@ import (
 
 	etcderr "github.com/coreos/etcd/error"
 	"github.com/coreos/go-etcd/etcd"
-	zk "github.com/wandoulabs/go-zookeeper/zk"
 	"github.com/ngaut/log"
 	"github.com/ngaut/pools"
+	zk "github.com/wandoulabs/go-zookeeper/zk"
 )
 
 var (
@@ -91,7 +91,7 @@ func convertToZkEvent(watchPath string, resp *etcd.Response, err error) zk.Event
 	return e
 }
 
-func NewEtcdConn(zkAddr string) (Conn, error) {
+func NewEtcdConn(zkAddr string, zkSessionTimeout int) (Conn, error) {
 	singleInstanceLock.Lock()
 	defer singleInstanceLock.Unlock()
 	if etcdInstance != nil {
