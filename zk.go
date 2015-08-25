@@ -15,8 +15,8 @@ import (
 	"sync"
 	"time"
 
+	"git.chunyu.me/infra/go-zookeeper/zk"
 	"github.com/ngaut/log"
-	"github.com/wandoulabs/go-zookeeper/zk"
 )
 
 var (

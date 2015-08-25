@@ -8,7 +8,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/wandoulabs/go-zookeeper/zk"
+	"git.chunyu.me/infra/go-zookeeper/zk"
 )
 
 // Make sure Stat implements the interface.

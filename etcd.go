@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
+	zk "git.chunyu.me/infra/go-zookeeper/zk"
 	etcderr "github.com/coreos/etcd/error"
 	"github.com/coreos/go-etcd/etcd"
 	"github.com/ngaut/log"
 	"github.com/ngaut/pools"
-	zk "github.com/wandoulabs/go-zookeeper/zk"
 )
 
 var (

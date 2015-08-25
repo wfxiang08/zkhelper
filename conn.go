@@ -1,7 +1,7 @@
 package zkhelper
 
 import (
-	"github.com/wandoulabs/go-zookeeper/zk"
+	"git.chunyu.me/infra/go-zookeeper/zk"
 )
 
 /*
